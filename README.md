@@ -38,3 +38,35 @@ CampusPlacementManagementSystem/
         │   └── PlacementService.java
         └── storage/
             └── FileManager.java
+
+
+```
+
+- **`model`**: Core domain entities and enums (`User`, `Admin`, `Student`, `Job`, `JobApplication`, `ApplicationStatus`).
+- **`storage`**: `FileManager` handling UTF-8 file reading, writing, and report export under `data/`.
+- **`service`**: `PlacementService` encapsulating business logic, validation, and application state transitions.
+- **`program`**: `MainProgram` providing the CLI entry point and user interaction loops.
+
+---
+
+## Prerequisites & How to Run
+
+- **Java Development Kit (JDK):** Java 17 or higher
+
+### Compile and Execute from Terminal
+
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/Varshithteja-27/CampusPlacementManagementSystem.git](https://github.com/Varshithteja-27/CampusPlacementManagementSystem.git)
+   cd CampusPlacementManagementSystem
+   ```
+
+2. Compile all Java source files:
+   ```bash
+   javac -d bin src/com/college/placement/model/*.java src/com/college/placement/storage/*.java src/com/college/placement/service/*.java src/com/college/placement/program/*.java
+   ```
+
+3. Run the application from the project root (so `data/` resolves properly):
+   ```bash
+   java -cp bin com.college.placement.program.MainProgram
+   ```
