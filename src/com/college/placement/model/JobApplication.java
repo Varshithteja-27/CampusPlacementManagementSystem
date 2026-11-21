@@ -1,0 +1,48 @@
+package com.college.placement.model;
+
+public class JobApplication {
+	private final int id;
+	private final int studentId;
+	private final int jobId;
+	private ApplicationStatus status;
+
+	public JobApplication(int id, int studentId, int jobId, ApplicationStatus status) {
+		this.id = id;
+		this.studentId = studentId;
+		this.jobId = jobId;
+		if (status == null) {
+			this.status = ApplicationStatus.PENDING;
+		} else {
+			this.status = status;
+		}
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public int getStudentId() {
+		return studentId;
+	}
+
+	public int getJobId() {
+		return jobId;
+	}
+
+	public ApplicationStatus getStatus() {
+		return status;
+	}
+
+	public boolean updateStatus(ApplicationStatus newStatus) {
+		if (this.status != ApplicationStatus.PENDING) {
+			return false;
+		}
+		if (newStatus == ApplicationStatus.SELECTED || newStatus == ApplicationStatus.REJECTED) {
+			this.status = newStatus;
+			return true;
+		}
+		return false;
+
+	}
+
+}
