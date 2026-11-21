@@ -1,0 +1,5 @@
+1|TCS|Software Developer|75.0
+2|Accenture|Front-End-Developer|65.0
+3|Wipro|Java Associate Engineer|70.0
+4|Infosys|System Engineer|60.0
+5|Amazon|SDE-1|85.0
